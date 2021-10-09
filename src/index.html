@@ -11,59 +11,70 @@
   <%= htmlWebpackPlugin.tags.headTags %>
 </head>
 
-<body>
+
+<header>
+
+  <button id="myBtn"></button>
   <div class="logo-container">
-    <nav class="logo-nav">
+    <div class="logo-nav">
       <img class="panagora-logo" src="./static/panagora-logo.svg">
-
-    </nav>
-  </div>
-  <div class="links-container">
-    <nav class="links-nav">
-      <a href="/">Products</a>
-      <!-- Trigger/Open The Modal -->
-      <button id="myBtn">About us</button>
-
-      <!-- The Modal -->
-
-      <div class="modal-container">
-        <div id="myModal" class="modal">
-
-          <!-- Modal content -->
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="about-container">
-              <div class="modal-content">
-                <div>
-
-                  <h2 id="captions"></h2>
-                  <h2 id="price"></h2>
-                </div>
-                <div class="img-container">
-                  <img id="modal-img" style="width: 100%;">
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </nav>
-
-
-
-  </div>
-
-
-  </div>
-  <div class="grid">
-    <div id="section">
-
-
     </div>
   </div>
-  <%= htmlWebpackPlugin.tags.bodyTags %>
-    <script type="text\javascript" src="./index.js"></script>
+  <nav class="links-container">
+    <ul class="links-list">
+      <li><button id=products-button class="nav-button">Products</button></li>
+      <li><button id="about-modal-button">About</button></li>
+    </ul>
+  </nav>
+</header>
 
-</body>
+<main>
+  <!-- Products Page -->
+  <section data-index="0" class="grid">
+    <div id="section">
+      <!-- Products inserted here -->
+
+    </div>
+  </section>
+
+
+</main>
+
+
+<!-- The Modal -->
+
+<div class="modal-container">
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="about-container">
+        <div class="modal-content">
+          <h2 id="modal-name"></h2>
+          <div class="price-modal-container">
+            <p id="modal-price"></p>
+            <p id="modal-currency"></p>
+          </div>
+          <p id="modal-desc"></p>
+          <div class="img-container">
+            <img id="modal-img">
+          </div>
+          <button id="buy-btn" class="modal-buy-button">Buy me!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+
+<%= htmlWebpackPlugin.tags.bodyTags %>
+  <script type="text\javascript" src="./index.js"></script>
+
+  </body>
 
 </html>
