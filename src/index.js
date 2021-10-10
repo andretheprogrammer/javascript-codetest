@@ -91,11 +91,12 @@ aboutModalBtn.onclick = function () {
   aboutImg.src =
     "https://images.ctfassets.net/fqa5nayer5tz/1fAN9sUD1T4N8o6clNRbD1/4113fab7def6b9da1d8c924dfe2d91d6/Panagora-office-5.jpg?fm=jpg&q=75&w=2560";
   aboutDesc.textContent =
-    "We always bring passion, curiosity and solid teamwork to the table. All of this, coupled with our expertise in our respective fields, ensures we deliver truly unique solutions. We pride ourselves in having diverse skills, cultural backgrounds and personalities. We make sure that community and individual development is at the heart of everything that we do.  We are Panagora.";
+    "We always bring passion, curiosity and solid teamwork to the table. All of this, coupled with our expertise in our respective fields, ensures we deliver truly unique solutions. We pride ourselves in having diverse skills, cultural backgrounds and personalities. We make sure that community and individual development is at the heart of everything that we do. \n \n We are Panagora.";
   aboutPrice.textContent = "";
   aboutCurrency.textContent = "";
   disableBuyButton.style.display = "none";
 };
+
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -122,3 +123,14 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+// Closes the modal on esc keydown
+document.addEventListener('keydown', function(e) {
+  modal.style.display = "none";
+});
+
+var e = new KeyboardEvent("keydown", {
+  key: "Escape",
+  bubbles: true,
+  cancelable: true
+});
+document.dispatchEvent(e);
